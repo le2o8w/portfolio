@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-mercury">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="mercury" clip-path="url(#clip-mercury)">
+    <g id="mercury-2" data-name="mercury" transform="translate(-3 -2.783)">
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="227.5" cy="227.5" r="227.5" transform="translate(32 31.783)" fill="#f24e7a"/>
+      <path id="Tracé_282" data-name="Tracé 282" d="M256,32V486.783c125.585,0,227.391-101.806,227.391-227.391S381.585,32,256,32Z" transform="translate(3.391 0)" fill="#c41d4a"/>
+      <path id="Tracé_283" data-name="Tracé 283" d="M129.313,128H72.635a226.455,226.455,0,0,0-31.341,64.969h88.019a32.484,32.484,0,1,0,0-64.969Z" transform="translate(0.141 1.453)" fill="#e8a3b6"/>
+      <path id="Tracé_284" data-name="Tracé 284" d="M352,224.484a32.484,32.484,0,0,0,32.484,32.484h97.453A227.372,227.372,0,0,0,472.5,192H384.484A32.484,32.484,0,0,0,352,224.484Z" transform="translate(4.845 2.422)" fill="#f24e7a"/>
+      <path id="Tracé_285" data-name="Tracé 285" d="M320.484,448.969h52.2A228.571,228.571,0,0,0,442.131,384H320.484a32.484,32.484,0,1,0,0,64.969Z" transform="translate(3.876 5.329)" fill="#f24e7a"/>
+      <path id="Tracé_286" data-name="Tracé 286" d="M259.391,256H32a227.372,227.372,0,0,0,9.435,64.969H259.391a32.484,32.484,0,0,0,0-64.969Z" transform="translate(0 3.391)" fill="#e8a3b6"/>
+      <path id="Tracé_287" data-name="Tracé 287" d="M345.09,128.484H320.727V104.121a8.121,8.121,0,0,0-16.242,0v24.363H280.121a8.121,8.121,0,1,0,0,16.242h24.363V169.09a8.121,8.121,0,0,0,16.242,0V144.727H345.09a8.121,8.121,0,1,0,0-16.242Z" transform="translate(3.634 0.969)" fill="#e8a3b6"/>
+      <path id="Tracé_288" data-name="Tracé 288" d="M216.848,400.363H200.606V384.121a8.121,8.121,0,0,0-16.242,0v16.242H168.121a8.121,8.121,0,0,0,0,16.242h16.242v16.242a8.121,8.121,0,0,0,16.242,0V416.606h16.242a8.121,8.121,0,0,0,0-16.242Z" transform="translate(1.938 5.208)" fill="#f6cad6"/>
+      <path id="Tracé_289" data-name="Tracé 289" d="M256,256a32.484,32.484,0,0,1,0,64.969Z" transform="translate(3.391 3.391)" fill="#f24e7a"/>
+    </g>
+  </g>
+</svg>
