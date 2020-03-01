@@ -155,6 +155,38 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+.pop {
+  animation: pop 1.4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+.slide {
+  animation: slide 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  10% {
+    opacity: 1;
+  }
+  99% {
+    transform: translateX(1vw);
+  }
+  100% {
+    transform: initial;
+  }
+}
 
 @media screen and (max-width: 480px) {
   body {

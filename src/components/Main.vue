@@ -49,6 +49,8 @@ header {
   align-items: center;
   min-height: 100vh;
   width: 100%;
+}
+section {
   margin: 5vh 0 10vh 0;
 }
 #contact {
@@ -66,8 +68,7 @@ header {
   .home {
     grid-template-columns: 50px calc(100% - 50px);
   }
-  section,
-  header {
+  section {
     margin: 2vh 0 15vh 0;
   }
 }

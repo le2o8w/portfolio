@@ -73,12 +73,6 @@ export default {
       viewWidth: window.innerWidth
     };
   },
-  mounted() {
-    window.addEventListener("resize", this.setHeight());
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize");
-  },
   computed: {
     previous() {
       return this.theme === "dark"
@@ -102,13 +96,6 @@ export default {
   methods: {
     visitUrl() {
       window.open(this.project.link, "_blank");
-    },
-    setHeight() {
-      if (window.innerWidth < 700) {
-        const height = window.innerHeight * 0.01;
-        document.querySelector(".details-grid").style.minHeight = `${95 *
-          height}px`;
-      }
     },
     closeView() {
       this.$emit("close");
@@ -197,56 +184,26 @@ export default {
   cursor: pointer;
 }
 
-.pop {
-  animation: pop 1.4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-.slide {
-  animation: slide 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-@keyframes pop {
-  0% {
-    transform: scale(0.95);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(-100vw);
-  }
-  10% {
-    opacity: 1;
-  }
-  99% {
-    transform: translateX(1vw);
-  }
-  100% {
-    transform: initial;
-  }
-}
 @media screen and (max-width: 700px) {
   .details-grid {
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 8% 18.75% 18.75% 4% 18.75% 18.75% 8%;
+    grid-template-rows: 8% 15% 15% 23% 23% 10%;
     min-height: 95vh;
   }
   .details-image {
     grid-area: 2 / 1 / 4 / 4;
+    background-position: top center;
   }
   .details-previous,
   .details-next {
     width: 40px;
   }
   .details-previous {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 3 / 1 / 4 / 2;
+    align-self: flex-end;
   }
   .details-next {
-    grid-area: 7 / 3 / 8 / 4;
+    grid-area: 6 / 3 / 7 / 4;
     align-self: flex-end;
   }
   .details-close {
@@ -257,24 +214,24 @@ export default {
   }
   .details-title {
     margin: 0 -2px 0 0;
-    align-self: flex-end;
+    align-self: flex-start;
     justify-self: flex-end;
-    padding: 0.5em;
+    padding: 0.8em;
     font-size: 1.4em;
-    min-width: 50%;
-    grid-area: 4 / 2 / 5 / 4;
+    min-width: 75%;
+    grid-area: 3 / 2 / 4 / 4;
     line-height: 1.4;
     text-align: right;
   }
   .details-link {
-    grid-area: 7 / 1 / 8 / 3;
+    grid-area: 6 / 1 / 7 / 3;
     padding-left: 10px;
   }
   .details-link span {
     font-size: 0.8em;
   }
   .details-description {
-    grid-area: 5 / 1 / 7 / 4;
+    grid-area: 4 / 1 / 6 / 4;
     justify-content: space-around;
     padding: 0.5em;
   }

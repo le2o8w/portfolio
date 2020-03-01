@@ -23,7 +23,7 @@ export default {
 .btn {
   display: block;
   max-width: 300px;
-  width: 25%;
+  width: 100%;
   height: 50px;
   padding: 3px;
   background-image: var(--gradient);
