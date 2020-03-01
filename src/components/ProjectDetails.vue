@@ -123,7 +123,9 @@ export default {
   width: min-content;
   min-width: 250px;
   height: min-content;
-  padding: 2.5rem 2.5rem 3rem 2.5rem;
+  margin: 80px 0 0 0;
+  align-self: center;
+  padding: 2.5rem;
   background: var(--bg-opacity-light);
   font-size: 2em;
   color: var(--font-color);
@@ -134,7 +136,7 @@ export default {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   grid-area: 1 / 2 / 5 / 5;
   justify-self: flex-end;
@@ -163,14 +165,14 @@ export default {
 }
 .details-close {
   grid-area: 1 / 1 / 2 / 2;
-  z-index: 3;
+  z-index: 10;
   cursor: pointer;
 }
 .details-previous {
   grid-area: 4 / 1 / 5 / 2;
   align-self: flex-end;
   width: 80px;
-  z-index: 3;
+  z-index: 10;
   cursor: pointer;
 }
 .details-next {
@@ -178,7 +180,7 @@ export default {
   align-self: flex-end;
   justify-self: flex-end;
   width: 80px;
-  z-index: 3;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -246,7 +248,7 @@ export default {
     justify-self: flex-end;
     padding: 0.5em;
     font-size: 1.4em;
-    min-width: 70%;
+    min-width: 50%;
     grid-area: 4 / 2 / 5 / 4;
     line-height: 1.4;
     text-align: right;

@@ -91,7 +91,7 @@ export default {
           technologies: "HTML5, CSS3, Javascript, PHP",
           iconLight: require(`@/assets/icons/projects/skiing.svg`),
           iconDark: require(`@/assets/icons/projects/skiing-w.svg`),
-          image: ""
+          image: require(`@/assets/img/ski-nautique.gif`)
         },
         {
           id: 3,
@@ -107,7 +107,7 @@ export default {
           description: "Restaurant de spécialités asiatique",
           iconLight: require(`@/assets/icons/projects/sushi.svg`),
           iconDark: require(`@/assets/icons/projects/sushi-w.svg`),
-          image: ""
+          image: require(`@/assets/img/nambo.gif`)
         },
         {
           id: 4,
@@ -121,7 +121,7 @@ export default {
           description: "Météo géolocalisée",
           iconLight: require(`@/assets/icons/projects/weather.svg`),
           iconDark: require(`@/assets/icons/projects/weather-w.svg`),
-          image: ""
+          image: require(`@/assets/img/weather.gif`)
         },
         {
           id: 5,
@@ -135,7 +135,7 @@ export default {
           description: "Playground",
           iconLight: require(`@/assets/icons/projects/phone.svg`),
           iconDark: require(`@/assets/icons/projects/phone-w.svg`),
-          image: ""
+          image: require(`@/assets/img/phone.gif`)
         },
         {
           id: 6,
@@ -149,7 +149,7 @@ export default {
           description: "Intégration d'une maquette",
           iconLight: require(`@/assets/icons/projects/blog.svg`),
           iconDark: require(`@/assets/icons/projects/blog-w.svg`),
-          image: ""
+          image: require(`@/assets/img/template.gif`)
         },
         {
           id: 7,
@@ -163,7 +163,7 @@ export default {
           description: "Application de notes",
           iconLight: require(`@/assets/icons/projects/notes.svg`),
           iconDark: require(`@/assets/icons/projects/notes-w.svg`),
-          image: ""
+          image: require(`@/assets/img/notebook.gif`)
         }
       ]
     };
