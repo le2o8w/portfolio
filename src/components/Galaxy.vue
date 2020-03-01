@@ -29,9 +29,6 @@ export default {
 </script>
 <style scoped>
 svg {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
   fill: url(#gradient);
   transform-style: preserve-3d;
   animation: spin 8s infinite linear;

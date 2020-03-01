@@ -73,6 +73,12 @@ export default {
       viewWidth: window.innerWidth
     };
   },
+  mounted() {
+    window.addEventListener("resize", this.setHeight());
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize");
+  },
   computed: {
     previous() {
       return this.theme === "dark"
@@ -96,6 +102,13 @@ export default {
   methods: {
     visitUrl() {
       window.open(this.project.link, "_blank");
+    },
+    setHeight() {
+      if (window.innerWidth < 700) {
+        const height = window.innerHeight * 0.01;
+        document.querySelector(".details-grid").style.minHeight = `${95 *
+          height}px`;
+      }
     },
     closeView() {
       this.$emit("close");
@@ -268,8 +281,8 @@ export default {
   .details-summary {
     font-size: 1em;
   }
-  .details-more {
+  /*   .details-more {
     display: none;
-  }
+  } */
 }
 </style>

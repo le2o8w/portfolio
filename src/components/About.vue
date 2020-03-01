@@ -1,25 +1,27 @@
 <template>
   <header>
     <article class="container">
-      <h1 class="title">
-        <span> Hello !</span>
-        <span> Je suis Léonore.</span>
-      </h1>
-      <p>Développeuse front-end basée à Lyon,</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione libero
-        exercitationem, laboriosam minus quod veritatis, corporis cupiditate
-        autem quibusdam fuga eos natus nisi praesentium tempora iure ipsa quia
-        molestiae nulla voluptate sit adipisci! Delectus, veniam illum aut
-        voluptatum porro sit.
-      </p>
-      <ButtonCustom
-        :text="`M'envoyer un message`"
-        :href="'#'"
-        @action="$scrollTop('contact')"
-      />
+      <div class="wrapper">
+        <h1 class="title">
+          <span> Hello !</span>
+          <span> Je suis Léonore.</span>
+        </h1>
+        <p>Développeuse front-end basée à Lyon,</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+          libero exercitationem, laboriosam minus quod veritatis, corporis
+          cupiditate autem quibusdam fuga eos natus nisi praesentium tempora
+          iure ipsa quia molestiae nulla voluptate sit adipisci! Delectus,
+          veniam illum aut voluptatum porro sit.
+        </p>
+        <ButtonCustom
+          :text="`M'envoyer un message`"
+          :href="'#'"
+          @action="$scrollTop('contact')"
+        />
+      </div>
+      <Galaxy class="galaxy-about" />
     </article>
-    <Galaxy class="galaxy-about" />
   </header>
 </template>
 <script>
@@ -35,9 +37,20 @@ export default {
 </script>
 <style scoped>
 article {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 30%);
+  height: 90vh;
+}
+.wrapper {
+  grid-area: 1 / 1 / 4 / 4;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+.galaxy-about {
+  grid-area: 2 / 4 / 4 / 5;
+  align-self: flex-end;
 }
 h1 {
   font-size: 3rem;
