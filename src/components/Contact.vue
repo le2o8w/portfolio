@@ -1,34 +1,38 @@
 <template>
   <section>
     <article class="container">
-      <h2>Let's get in touch</h2>
+      <h2>Vous avez envie de travailler avec moi ?</h2>
       <div class="contact-details">
-        <div>
-          <h3>Blabla</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui,
-            laborum nisi eligendi asperiores blanditiis beatae cupiditate sed
-            provident molestiae officiis.
-          </p>
-        </div>
-        <div>
-          <h3>Blibli</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            iure esse amet, error reiciendis laborum.
-          </p>
-        </div>
+        <p>
+          Merci pour votre intérêt ! J'étudierai votre proposition avec le plus
+          grand sérieux. Envoyez moi un e-mail et nous pourrons échanger à ce
+          sujet :)
+        </p>
+        <transition name="fade" mode="out-in">
+          <InputField
+            :question="questions[currentStep]"
+            :progress="progress"
+            :theme="theme"
+            :isFinalStep="isFinalStep"
+            @stepComplete="nextStep"
+          />
+        </transition>
+        <Astronaut :showMessage="showMessage" />
       </div>
-      <transition name="fade" mode="out-in">
-        <InputField
-          :question="questions[currentStep]"
-          :progress="progress"
-          :theme="theme"
-          :isFinalStep="isFinalStep"
-          @stepComplete="nextStep"
-        />
-      </transition>
-      <Astronaut :showMessage="showMessage" />
+      <div>
+        <h3>Si vous avez encore des doutes...</h3>
+        <p>
+          Vous avez besoin d'en savoir plus sur moi ? <br />
+          Ce qui me rend heureuse : mes chats, voyager, la Thaïlande et le Laos,
+          le thé à la vanille et le ชาเย็น, regarder des séries de
+          science-fiction / des dystopies (ne me lancez pas sur The Leftovers,
+          Legion, Black Mirror, Utopia, Mr. Robot, Misfits, Rick and Morty...),
+          écouter Bonobo, Superpoze, Thylacine, Ben Khan, les Arctic Monkeys.
+          <br />
+          Ce que je déteste: les températures en dessous de 20°C agrémentées de
+          pluie, les bananes, les scolopendres, les pieds.
+        </p>
+      </div>
     </article>
   </section>
 </template>
@@ -116,13 +120,13 @@ export default {
 </script>
 <style scoped>
 .contact-details {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  margin-bottom: 50px;
 }
-.contact-details > div {
-  width: 45%;
-}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -137,12 +141,5 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
-  .contact-details {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  .contact-details > div {
-    width: 100%;
-  }
 }
 </style>

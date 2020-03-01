@@ -3,12 +3,37 @@
     <article class="container">
       <div class="grid-skills">
         <div class="skills-description">
-          <h2>How do I do all this stuff ?</h2>
+          <h2>C'est quoi ta recette ?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quam asperiores voluptatem voluptate atque itaque provident odit
-            saepe! Possimus incidunt nesciunt qui ipsam beatae, reiciendis
-            voluptas voluptatum quasi inventore repellat?
+            Évidemment, la base, c'est le HTML. Certains grogneront
+            <em>"c'est pas de la programmation"</em>, mais c'est vachement plus
+            compliqué de concevoir un site web sans markup. Grâce aux merveilles
+            du CSS, le contenu s'illumine, se pare de ses plus beaux atours et
+            s'anime sous nos yeux ébahis. Consécration, le Javascript permet à
+            tout ce beau monde d'intéragir avec l'utilisateur.
+          </p>
+          <p>
+            On peut s'arrêter là. Ou ajouter des librairies, un framework (CSS
+            ou JS), consommer des APIs, façonner un back-end, établir une base
+            de données. Et c'est fantastique : tout est possible pour réaliser
+            un projet sur-mesure. J'apprends continuellement des nouvelles
+            méthodes, des bonnes pratiques qui me mènent à implémenter de
+            nouvelles architectures, à intégrer de nouveaux outils à mes
+            projets. Être développeur c'est faire partie d'une communauté
+            d'esprits brillants, inventifs, innovants, qui vous inspirent et
+            vous permettent d'évoluer constamment et d'apprendre tous les jours.
+          </p>
+          <p>
+            Au gré de mon apprentissage et des projets que j'ai développés, j'ai
+            pu acquérir de bonnes connaissances en Javascript et Typescript. À
+            mon poste actuel, je manie quotidiennement Angular et sur mon temps
+            libre, j'aime particulièrement utiliser Vue.js pour mes projets.
+            J'ai aussi travaillé avec PHP, natif ou Symfony. Je ne suis pas
+            totalement allergique au back-end ! D'ailleurs, récemment, je
+            m'initie à Node.js pour pouvoir maîtriser les fonctionnalités de mes
+            applications d'un bout à l'autre. Je m'intéresse aussi au rendu 3D
+            et suis particulièrement attentive aux chefs-d'œuvre réalisés avec
+            WebGL. Un jour Three.js n'aura plus de secrets pour moi !
           </p>
         </div>
         <Planet
@@ -96,7 +121,7 @@ export default {
 .grid-skills {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 15vh repeat(5, 15vh);
+  grid-template-rows: 50vh repeat(5, 24vh);
   grid-column-gap: 0px;
   grid-row-gap: 20px;
   width: 100%;
@@ -104,6 +129,9 @@ export default {
 }
 
 .skills-description {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   grid-area: 1 / 1 / 2 / 5;
 }
 .skill[data-id="1"] {
@@ -140,6 +168,11 @@ export default {
 .skill[data-id="9"] {
   grid-area: 5 / 1 / 6 / 2;
 }
+@media screen and (max-width: 1440px) {
+  .grid-skills {
+    grid-template-rows: 75vh repeat(5, 24vh);
+  }
+}
 @media screen and (max-width: 1100px) {
   .skill {
     width: 90%;
@@ -151,7 +184,7 @@ export default {
   }
   .grid-skills {
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 50vh repeat(11, 20vh);
+    grid-template-rows: 125vh repeat(11, 20vh);
     padding-bottom: 50px;
   }
   .skill[data-id="1"] {
@@ -188,6 +221,16 @@ export default {
   }
   .skill[data-id="9"] {
     grid-area: 11 / 2 / 12 / 3;
+  }
+}
+@media screen and (max-width: 420px) {
+  .grid-skills {
+    grid-template-rows: 150vh repeat(11, 20vh);
+  }
+}
+@media screen and (max-width: 350px) {
+  .grid-skills {
+    grid-template-rows: 225vh repeat(11, 20vh);
   }
 }
 </style>
