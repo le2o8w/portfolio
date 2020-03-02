@@ -21,7 +21,7 @@
         <Astronaut :showMessage="showMessage" />
       </div>
       <div>
-        <h3>Vous voulez en savoir plus sur moi ?</h3>
+        <h2>Vous voulez en savoir plus sur moi ?</h2>
         <div class="about-details">
           <img v-if="theme === 'dark'" :src="likeLight" alt="" />
           <img v-else :src="likeDark" alt="" />
@@ -151,9 +151,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 50px;
-}
-.title {
   margin-bottom: 50px;
 }
 
