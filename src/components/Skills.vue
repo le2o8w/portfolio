@@ -221,7 +221,7 @@ export default {
 }
 @media screen and (max-width: 420px) {
   .grid-skills {
-    grid-template-rows: 125vh repeat(11, 20vh);
+    grid-template-rows: 140vh repeat(11, 20vh);
   }
 }
 @media screen and (max-width: 350px) {
