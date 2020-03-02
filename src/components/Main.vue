@@ -68,6 +68,7 @@ section {
   .home {
     grid-template-columns: 50px calc(100% - 50px);
   }
+  header,
   section {
     margin: 2vh 0 15vh 0;
   }

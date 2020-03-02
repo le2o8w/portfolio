@@ -182,5 +182,8 @@ export default {
   .about-details {
     flex-direction: column;
   }
+  .contact-details .field {
+    margin: 25px 0;
+  }
 }
 </style>

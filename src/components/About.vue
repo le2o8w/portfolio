@@ -93,7 +93,7 @@ article {
 
 @media screen and (max-width: 700px) {
   article {
-    min-height: 100vh;
+    min-height: 150vh;
   }
   h1 {
     font-size: 2rem;
@@ -101,11 +101,6 @@ article {
   h1,
   p {
     margin: 0 0 20px 0;
-  }
-}
-@media screen and (max-width: 420px) {
-  h1 {
-    font-size: 1.8rem;
   }
 }
 </style>
