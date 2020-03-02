@@ -5,28 +5,6 @@
         <div class="skills-description">
           <h2>C'est quoi ta recette ?</h2>
           <p>
-            Évidemment, la base, c'est le <span class="underlined">HTML</span>.
-            Certains grogneront <em>"c'est pas de la programmation"</em>, mais
-            c'est vachement plus compliqué de concevoir un site web sans markup.
-            Grâce aux merveilles du <span class="underlined">CSS</span>, le
-            contenu s'illumine, se pare de ses plus beaux atours et s'anime sous
-            nos yeux ébahis. Consécration, le
-            <span class="underlined">Javascript</span> permet à tout ce beau
-            monde d'intéragir avec l'utilisateur.
-          </p>
-          <p>
-            On peut s'arrêter là. Ou ajouter des librairies, un framework (CSS
-            ou JS), consommer des APIs, façonner un back-end, établir une base
-            de données. Et c'est fantastique : tout est possible pour réaliser
-            un projet sur-mesure. J'apprends continuellement des nouvelles
-            méthodes, des <span class="underlined">bonnes pratiques</span> qui
-            me premettent d'implémenter de nouvelles architectures, d'intégrer
-            de nouveaux outils à mes projets. Être développeur c'est faire
-            partie d'une communauté d'esprits brillants, inventifs,
-            <span class="underlined">innovants</span>, qui vous inspirent et
-            vous permettent d'évoluer constamment et d'apprendre tous les jours.
-          </p>
-          <p>
             Au gré de mon apprentissage et des projets que j'ai développés, j'ai
             pu acquérir de bonnes connaissances pratiques en
             <span class="underlined">Javascript et Typescript</span>. À mon
@@ -42,6 +20,16 @@
             et suis particulièrement attentive aux chefs-d'œuvre réalisés avec
             WebGL. Un jour <span class="underlined">Three.js</span> n'aura plus
             de secrets pour moi !
+          </p>
+          <p>
+            Ce que je préfère dans ce domaine, c'est que j'apprends
+            continuellement de nouvelles méthodes, des
+            <span class="underlined">bonnes pratiques</span> qui me premettent
+            d'implémenter de nouvelles architectures, d'intégrer de nouveaux
+            outils à mes projets. Être développeur c'est faire partie d'une
+            communauté d'esprits brillants, inventifs,
+            <span class="underlined">innovants</span>, qui vous inspirent et
+            vous permettent d'évoluer constamment et d'apprendre tous les jours.
           </p>
         </div>
         <Planet
