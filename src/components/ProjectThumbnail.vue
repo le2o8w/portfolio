@@ -2,12 +2,14 @@
   <article class="container">
     <div class="thumbnails-grid">
       <div class="thumbnails-intro">
-        <h2>What I'm up to these days</h2>
+        <h2>Projets, applications, sites, pages, expérimentations...</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam
-          asperiores voluptatem voluptate atque itaque provident odit saepe!
-          Possimus incidunt nesciunt qui ipsam beatae, reiciendis voluptas
-          voluptatum quasi inventore repellat?
+          J'ai toujours un workspace
+          <span class="underlined">VS Code</span> ouvert sur mon laptop. Que ce
+          soit pour bricoler une petite page qui ne servira qu'à moi, apprendre
+          à maitriser de nouvelles notions, ou travailler sur un projet pour des
+          amis, <span class="underlined">coder</span> ne fait pas partie
+          uniquement de ma vie professionnelle.
         </p>
       </div>
       <template v-for="project in projects">
@@ -161,7 +163,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-size: 1rem;
+  font-size: 1em;
   z-index: 2;
   opacity: 0;
   visibility: hidden;

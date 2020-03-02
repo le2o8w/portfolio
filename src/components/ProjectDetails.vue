@@ -238,8 +238,5 @@ export default {
   .details-summary {
     font-size: 1em;
   }
-  /*   .details-more {
-    display: none;
-  } */
 }
 </style>

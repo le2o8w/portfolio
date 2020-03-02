@@ -55,7 +55,8 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .btn {
-    width: 90%;
+    width: 80%;
+    height: 40px;
   }
 }
 </style>

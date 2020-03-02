@@ -1,13 +1,14 @@
 <template>
   <section>
     <article class="container">
-      <h2>Vous avez envie de travailler avec moi ?</h2>
       <div class="contact-details">
-        <p>
-          Merci pour votre intérêt ! J'étudierai votre proposition avec le plus
-          grand sérieux. Envoyez moi un e-mail et nous pourrons échanger à ce
-          sujet :)
-        </p>
+        <div class="title">
+          <h2>
+            Vous avez envie de travailler avec moi ?
+          </h2>
+          <p>Envoyez moi un e-mail et nous pourrons en parler ensemble :)</p>
+        </div>
+
         <transition name="fade" mode="out-in">
           <InputField
             :question="questions[currentStep]"
@@ -20,18 +21,30 @@
         <Astronaut :showMessage="showMessage" />
       </div>
       <div>
-        <h3>Si vous avez encore des doutes...</h3>
-        <p>
-          Vous avez besoin d'en savoir plus sur moi ? <br />
-          Ce qui me rend heureuse : mes chats, voyager, la Thaïlande et le Laos,
-          le thé à la vanille et le ชาเย็น, regarder des séries de
-          science-fiction / des dystopies (ne me lancez pas sur The Leftovers,
-          Legion, Black Mirror, Utopia, Mr. Robot, Misfits, Rick and Morty...),
-          écouter Bonobo, Superpoze, Thylacine, Ben Khan, les Arctic Monkeys.
-          <br />
-          Ce que je déteste: les températures en dessous de 20°C agrémentées de
-          pluie, les bananes, les scolopendres, les pieds.
-        </p>
+        <h3>Vous voulez en savoir plus sur moi ?</h3>
+        <div class="about-details">
+          <img v-if="theme === 'dark'" :src="likeLight" alt="" />
+          <img v-else :src="likeDark" alt="" />
+          <p>
+            J'aime mes chats, voyager, la
+            <span class="underlined">Thaïlande</span> et le Laos, le thé à la
+            vanille et le <span class="underlined">ชาเย็น</span>, regarder des
+            séries de science-fiction ou fantastiques comme
+            <span class="underlined">The Leftovers</span>, Legion, Black Mirror,
+            Utopia, Mr. Robot, Misfits, Rick and Morty, écouter
+            <span class="underlined">Bonobo</span>, Superpoze, Thylacine, Ben
+            Khan, les <span class="underlined">Arctic Monkeys</span>.
+          </p>
+        </div>
+        <div class="about-details">
+          <img v-if="theme === 'dark'" :src="dislikeLight" alt="" />
+          <img v-else :src="dislikeDark" alt="" />
+          <p>
+            Je ne suis pas vraiment fan des températures
+            <span class="underlined">en dessous de 15°C</span>, des bananes, des
+            scolopendres.
+          </p>
+        </div>
       </div>
     </article>
   </section>
@@ -67,18 +80,18 @@ export default {
         },
         {
           step: 1,
-          name: "email",
-          label: "Email",
-          type: "email",
+          name: "subject",
+          label: "Sujet",
+          type: "text",
           errors: {
             empty: true,
-            invalidEmail: true
+            invalidEmail: false
           },
           fieldType: "input"
         },
         {
           step: 2,
-          name: "message",
+          name: "body",
           label: "Message",
           errors: {
             empty: true,
@@ -88,7 +101,11 @@ export default {
         }
       ],
       progress: 100,
-      result: []
+      result: [],
+      likeDark: require(`@/assets/icons/like.svg`),
+      likeLight: require(`@/assets/icons/like-w.svg`),
+      dislikeDark: require(`@/assets/icons/alien.svg`),
+      dislikeLight: require(`@/assets/icons/alien-w.svg`)
     };
   },
 
@@ -102,12 +119,22 @@ export default {
       }
       if (this.currentStep === this.questions.length) {
         this.showMessage = true;
-        //TODO ajax sendbymail
+        this.result = Object.assign({}, ...this.result);
+        this.mailBody();
         this.initForm();
         setTimeout(() => {
           this.showMessage = false;
-        }, 5000);
+        }, 10000);
       }
+    },
+    mailBody() {
+      const subject = encodeURIComponent(
+        `${this.result.name} - ${this.result.subject}`
+      );
+      const body = encodeURIComponent(
+        `Bonjour Léonore, \r\n\r\nJe viens de visiter ton portfolio... \r\n\r\n${this.result.body} \r\n\r\nÀ bientôt ! \r\n\r\n${this.result.name}`
+      );
+      window.location.href = `mailto:lrousville@gmail.com?subject=${subject}&body=${body}`;
     },
     initForm() {
       this.progress = 100;
@@ -126,7 +153,18 @@ export default {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.title {
+  margin-bottom: 50px;
+}
 
+.about-details {
+  display: flex;
+  align-items: center;
+}
+.about-details img {
+  max-width: 40px;
+  margin-right: 20px;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -141,5 +179,8 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
+  .about-details {
+    flex-direction: column;
+  }
 }
 </style>

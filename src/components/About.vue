@@ -6,22 +6,25 @@
         <span> Je suis Léonore.</span>
       </h1>
       <p>
-        Développeuse front-end basée à Lyon, je réalise des sites web et des
-        applications depuis 2 ans.
+        Développeuse <span class="underlined">front-end</span> basée à Lyon, je
+        réalise des sites web et des applications
+        <span class="underlined">depuis 2 ans</span>.
       </p>
       <p>
-        J'apprécie surtout travailler avec Javascript, ses frameworks (notament
-        Vue.js et Angular 2+) et ses librairies, qui permettent de rendre les
-        pages plus interactives, fluides et attractives pour les utilisateurs.
+        J'aime surtout travailler avec
+        <span class="underlined">Javascript</span>, ses frameworks (notament
+        <span class="underlined">Vue.js et Angular 2+</span>) et ses librairies,
+        qui permettent de rendre les pages plus interactives, fluides et
+        attractives pour les utilisateurs.
       </p>
       <p>
-        Je m'intéresse aussi au design et à l'UX, préférant les interfaces
-        modernes et créatives. Je peux passer des heures à peaufiner une
-        maquette ou une feuille de styles pour obtenir le rendu parfait que
-        j'avais imaginé !
+        Je m'intéresse aussi au design et à l'UX, préférant les
+        <span class="underlined">interfaces modernes et créatives</span>. Je
+        peux passer des heures à peaufiner une maquette ou une feuille de styles
+        pour obtenir le rendu parfait que j'avais imaginé !
       </p>
       <ButtonCustom
-        :text="`Faites moi signe !`"
+        :text="`Dites-moi bonjour !`"
         :href="'#'"
         @action="$scrollTop('contact')"
       />
@@ -52,6 +55,7 @@ h1 {
   font-size: 3rem;
   margin: 0 0 20px 0;
 }
+
 .title span {
   display: block;
   line-height: 1.3;
@@ -61,9 +65,11 @@ p {
   width: 90%;
   margin: 0 0 10px 0;
 }
+
 article {
   padding: 20px 0;
 }
+
 .galaxy-about {
   position: absolute;
   top: 8%;
@@ -95,6 +101,11 @@ article {
   h1,
   p {
     margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 1.8rem;
   }
 }
 </style>

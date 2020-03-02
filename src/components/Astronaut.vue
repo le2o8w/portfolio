@@ -234,8 +234,8 @@
     ></div>
     <div class="border"></div>
     <div v-if="showMessage" class="message">
-      <div class="glitch" data-text="message">message</div>
-      <div class="glitch" data-text="envoyé">envoyé</div>
+      <div class="glitch" data-text="merci">merci</div>
+      <div class="glitch" data-text="beaucoup">beaucoup</div>
     </div>
   </div>
 </template>

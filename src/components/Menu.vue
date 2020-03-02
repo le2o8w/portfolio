@@ -422,10 +422,6 @@ input:checked + .slider:before {
   nav {
     height: 105vh;
   }
-  /*   .menu-container {
-    height: 50%;
-    justify-content: space-around;
-  } */
 }
 @media screen and (max-width: 480px) {
   nav {

@@ -132,6 +132,7 @@ body {
   margin: 0;
   background-color: var(--bg-color);
   color: var(--font-color);
+  font-size: 1em;
   font-family: "Gramatika", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -145,7 +146,22 @@ body {
   width: 85%;
   margin: 0 auto;
 }
-
+.underlined {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 50%,
+    var(--primary-color) 50%
+  );
+  background-position: -0% 0;
+  background-size: 200% auto;
+  color: var(--font-color);
+  font-weight: bolder;
+  text-decoration: none;
+  transition: background-position 0.5s ease-out;
+}
+.underlined:hover {
+  background-position: -99.99% 0;
+}
 .no-select {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -190,7 +206,7 @@ body {
 
 @media screen and (max-width: 480px) {
   body {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 }
 </style>

@@ -78,7 +78,7 @@ export default {
           technologies: "Angular 6, Alfresco ADF, APIs REST, Ansible",
           iconLight: require(`@/assets/icons/projects/ged.svg`),
           iconDark: require(`@/assets/icons/projects/ged-w.svg`),
-          image: ""
+          image: require(`@/assets/img/espace_GED.gif`)
         },
         {
           id: 2,

@@ -10,7 +10,7 @@
         @keyup.enter="next"
         v-model="value"
       />
-      <input
+      <!--       <input
         v-if="question.fieldType === 'input' && question.type === 'email'"
         :name="question.name"
         type="email"
@@ -20,7 +20,7 @@
         @keyup="showNext = true"
         @keyup.enter="next"
         v-model="value"
-      />
+      /> -->
       <textarea
         v-if="question.fieldType === 'textarea'"
         rows="1"
@@ -56,9 +56,6 @@
       <template v-if="isEmpty && question.errors.empty">
         Champ requis.
       </template>
-      <template v-if="isInvalidEmail && question.errors.invalidEmail">
-        E-mail invalide.
-      </template>
     </span>
   </div>
 </template>
@@ -88,22 +85,12 @@ export default {
       if (this.question.errors.empty) {
         this.value ? (this.isEmpty = false) : (this.isEmpty = true);
       }
-      if (this.question.errors.invalidEmail) {
-        this.validateEmail(this.value)
-          ? (this.isInvalidEmail = false)
-          : (this.isInvalidEmail = true);
-      }
-      if (!this.isEmpty && !this.isInvalidEmail) {
+      if (!this.isEmpty) {
         if (this.isFinalStep) {
           document.querySelector(".progress-hide").style.width = 0;
           document.querySelector(".end-icon").classList.add("animate");
-
-          setTimeout(() => {
-            this.send();
-          }, 1000);
-        } else {
-          this.send();
         }
+        this.send();
       }
     },
     send() {
@@ -118,10 +105,6 @@ export default {
       if (rows < 10) {
         textarea.setAttribute("rows", rows + 1);
       }
-    },
-    validateEmail(email) {
-      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
-      return re.test(String(email));
     }
   }
 };
@@ -194,7 +177,6 @@ export default {
 }
 .error {
   font-size: 0.9em;
-  font-family: "gramatika light";
   margin: 5px;
 }
 
