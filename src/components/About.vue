@@ -8,12 +8,12 @@
       <p>
         Développeuse <span class="underlined">front-end</span> basée à Lyon, je
         réalise des sites web et des applications
-        <span class="underlined">depuis 2 ans</span>.
+        <span class="underlined">depuis {{ since }} ans</span>.
       </p>
       <p>
         J'aime surtout travailler avec
         <span class="underlined">Javascript</span>, ses frameworks (notament
-        <span class="underlined">Vue.js et Angular 2+</span>) et ses librairies,
+        <span class="underlined">Angular 2+ et Vue.js</span>) et ses librairies,
         qui permettent de rendre les pages plus interactives, fluides et
         attractives pour les utilisateurs.
       </p>
@@ -40,6 +40,13 @@ export default {
   components: {
     ButtonCustom,
     Galaxy
+  },
+  computed: {
+    since() {
+      const firstJob = new Date().setFullYear(2019);
+      const years = new Date(new Date() - firstJob).getFullYear() - 1970;
+      return years;
+    }
   }
 };
 </script>

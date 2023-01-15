@@ -12,7 +12,7 @@
             <span class="underlined">Angular</span> et sur mon temps libre,
             j'aime particulièrement utiliser
             <span class="underlined">Vue.js</span> pour mes projets. J'ai aussi
-            implémentés quelques fonctionnalités avec
+            implémenté quelques fonctionnalités avec
             <span class="underlined">PHP, natif ou Symfony</span>. Je ne suis
             pas totalement allergique au back-end ! D'ailleurs, récemment, je
             m'initie à Node.js pour pouvoir maîtriser les fonctionnalités de mes
